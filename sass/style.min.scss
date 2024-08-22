@@ -1,0 +1,336 @@
+@use "layout";
+@use "bootstrap";
+
+$base-blue: #0057bb;
+$blue-hover: #1d73be;
+$base-green: #4bbea0;
+
+header.top-header {
+  background: linear-gradient(50deg, #0057bb 78%, #0057bb 31%);
+  position: relative;
+  z-index: 5000;
+  li:first-child{
+    width: 80px;
+    text-align: center;
+    height: 30px;
+    line-height: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+
+  }
+  .parent {
+    position: relative;
+    & > a {
+      color: #fff;
+    }
+    .child {
+      display: none;
+    }
+  }
+  .parent:hover {
+    position: relative;
+    .border-gray::after {
+      content: " ";
+      top: 30px;
+      display: inline-block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      left: 0;
+      background-color: #55595c;
+      z-index: 2;
+    }
+    .child {
+      display: block;
+      position: absolute;
+
+
+      a {
+        color: gray;
+      }
+    }
+    .flag{
+      width: 80px;
+      text-align: center;
+      height: 30px;
+      line-height: 2rem;
+      background: linear-gradient(50deg, #0057bb 78%, #0057bb 31%);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    }
+    .call-part {
+      top: 2rem;
+      width: 9rem;
+      height: 120px;
+      line-height: 2rem;
+      text-align: center;
+      font-size: 14px;
+      background-color: #fffffff7;
+      li:hover {
+        background-color: #55595c;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.scrolled {
+  header.main-header {
+    top: 0;
+  }
+}
+header.main-header {
+  
+  background-color: #fff;
+  top: 9%;
+
+  ul {
+    li {
+      a {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    li:first-child,
+    li:hover {
+      a {
+        color: $blue-hover;
+      }
+    }
+    li.parent{
+      position: relative;
+      .child{
+        display: none;
+      }
+    }
+    li.parent:hover{
+      position: relative;
+      .child{
+        display: block;
+        li{
+         
+          position: absolute;
+          width: 140px;
+          text-align: center;
+          height: 30px;
+          line-height: 2rem;
+          background: linear-gradient(50deg, #0057bb 78%, #0057bb 31%);
+          a{
+            color: #fff;
+          }
+        }
+        
+        li:hover{
+          width: 140px;
+          background: #fff;
+          a{
+           
+            color: $base-blue;
+          }
+        }
+      }
+    }
+  }
+  .button {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: $base-blue;
+    color: #fff;
+    line-height: 31px;
+    font-size: 14px;
+  }
+}
+main {
+  .first-section {
+    background: url(../imges/header-1.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+    position: relative;
+    .text-box {
+      position: absolute;
+      top: 15%;
+      right: 15%;
+      text-align: start;
+      h2 {
+        color: $base-green;
+        font-weight: bold;
+      }
+      ul {
+        list-style: disc;
+        padding-right: 15px;
+      }
+      a {
+        margin-top: 1rem;
+        display: inline-block;
+        width: 180px;
+        height: 40px;
+        border-radius: 3px;
+        text-align: center;
+        background-color: $base-green;
+        color: #fff;
+        line-height: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+  .third-section {
+    background-color: #fff;
+    height: auto;
+    position: relative;
+    .layer {
+      background: #007aca;
+      width: 100%;
+      height: 20rem;
+      padding: 0;
+      position: relative;
+      z-index: 3;
+    }
+    .container {
+      position: relative;
+      top: -135px;
+      z-index: 5;
+      .card-body {
+        a {
+          i {
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .fourth-section {
+    .swiper {
+      width: 1040px;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 325px !important;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #042c95;
+      font-weight: 700;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 22px;
+    }
+    .swiper-button-next {
+      left: 0 !important;
+    }
+
+    .swiper-button-prev {
+      right: 0 !important;
+    }
+  }
+  .fifth-section {
+    .col-12.col-md-6 {
+      img {
+        width: 400px;
+      }
+      ul {
+        margin: 1rem 0;
+        padding: 1rem 0;
+        li {
+          width: 300px;
+          height: 35px;
+          padding: 0.5rem 1rem;
+          margin: 1rem 0;
+          opacity: 0.9;
+          font-size: 14px;
+          border-radius: 5px;
+          i {
+            color: #4bbea0;
+          }
+        }
+      }
+    }
+  }
+  .sixth-section{
+    h6{
+      color: #042C97;
+    }
+    img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    i{
+      color: #f0ad4e;
+    }
+    p{
+      font-size: 13px;
+    }
+  }
+  .sevnth-section{
+    img{
+      width: 38%;
+    }
+  }
+  .eigth-section{
+    h6{
+      color: #042C97;
+    }
+    .card-body{
+      h5:hover,
+      a:hover{
+        color: #0045a0 !important;
+      }
+      a{
+        i{
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}
+footer{
+  background: linear-gradient(50deg, #0057bb 78%, #0057bb 31%);
+  height: auto;
+  color: #fff;
+  position: relative;
+  h5{
+    width: 45%;
+    padding:0.8rem 0 ;
+    border-bottom: 4px solid #4BBEA0;
+  }
+  ul{
+    li{
+      a{
+        color: #fff;
+      }
+    }
+    li:hover{
+      a{
+        color:#4BBEA0;
+      }
+    }
+  }
+  .col-12.col-md-3{
+    &>i{
+      font-size: 24px;
+      padding: 1rem;
+      opacity: 0.5;
+    }
+    i:hover{
+      opacity: 1;
+    }
+  }
+}
